@@ -9,7 +9,6 @@ import VideoDetail from './components/video_detail'
 
 const API_KEY = 'AIzaSyD6AUKsDwrGtima6xPfDxyf4LegkqngxYE';
 
-
 class App extends Component {
   constructor(props){
     super(props);
@@ -27,10 +26,8 @@ videoSearch(term){
      })
   });
 }
-
   render(){
     const videoSearch = _.debounce((term)=> { this.videoSearch(term) }, 300)
-
     return(
       <div>
         <SearchBar onSearchTermChange={videoSearch}/>
